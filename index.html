@@ -31,37 +31,68 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+        <h1>
+<a name="jenkins-rackspace-canontm-theme" class="anchor" href="#jenkins-rackspace-canontm-theme"><span class="octicon octicon-link"></span></a>Jenkins Rackspace Canon(tm) Theme</h1>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<p>CSS and JS to implement <a href="http://canon.rackspace.com/">Rackspace Canon</a> as a theme for <a href="http://jenkins-ci.org/">Jenkins CI</a>.</p>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
+<h3>
+<a name="before" class="anchor" href="#before"><span class="octicon octicon-link"></span></a>Before</h3>
+
+<p><img src="CanonJenkinsBefore.png" alt="Before" title="Before"></p>
+
+<h3>
+<a name="after" class="anchor" href="#after"><span class="octicon octicon-link"></span></a>After</h3>
+
+<p><img src="CanonJenkinsAfter.png" alt="After" title="After"></p>
+
+<h2>
+<a name="cdn-urls" class="anchor" href="#cdn-urls"><span class="octicon octicon-link"></span></a>CDN URLs</h2>
+
+<h3>
+<a name="http" class="anchor" href="#http"><span class="octicon octicon-link"></span></a>HTTP</h3>
+
+<p>CSS: <a href="http://css.cdn.rackspace.com/canon-jenkins/style.css">http://css.cdn.rackspace.com/canon-jenkins/style.css</a></p>
+
+<p>JS: <a href="http://js.cdn.rackspace.com/canon-jenkins/app.min.js">http://js.cdn.rackspace.com/canon-jenkins/app.min.js</a></p>
+
+<h3>
+<a name="https" class="anchor" href="#https"><span class="octicon octicon-link"></span></a>HTTPS</h3>
+
+<p>CSS: <a href="https://8ab972673b5689e842a8-4ce0e842e9a020b19bb3a8bec8532674.ssl.cf1.rackcdn.com/canon-jenkins/style.css">https://8ab972673b5689e842a8-4ce0e842e9a020b19bb3a8bec8532674.ssl.cf1.rackcdn.com/canon-jenkins/style.css</a></p>
+
+<p>JS: <a href="https://577351e10bc4a0198d93-f60a0bb748a3c84145bb10da7563bafb.ssl.cf1.rackcdn.com/canon-jenkins/app.min.js">https://577351e10bc4a0198d93-f60a0bb748a3c84145bb10da7563bafb.ssl.cf1.rackcdn.com/canon-jenkins/app.min.js</a></p>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<ol>
+<li>Install the <a href="https://wiki.jenkins-ci.org/display/JENKINS/Simple+Theme+Plugin">Simple Theme Plugin for Jenkins</a>
+</li>
+<li>Navigate to Jenkins &gt; Manage Jenkins &gt; Configure System &gt; Theme</li>
+<li>Set <em>URL of theme CSS</em> to <code>http://css.cdn.rackspace.com/canon-jenkins/style.css</code> (or another URL of your setting/choosing)</li>
+<li>Set <em>URL of theme JS</em> to <code>http://js.cdn.rackspace.com/canon-jenkins/app.min.js</code> (or another URL of your setting/choosing)</li>
+</ol><h2>
+<a name="to-manually-change-simpletheme-css-and-js-values" class="anchor" href="#to-manually-change-simpletheme-css-and-js-values"><span class="octicon octicon-link"></span></a>To manually change SimpleTheme CSS and JS values</h2>
+
+<ol>
+<li>Edit: <code>$JENKINS_HOME/org.codefirst.SimpleThemeDecorator.xml</code>
+</li>
+</ol><pre><code>&lt;?xml version='1.0' encoding='UTF-8'?&gt;
+&lt;org.codefirst.SimpleThemeDecorator plugin="simple-theme-plugin@0.3"&gt;
+  &lt;cssUrl&gt;http://css.cdn.rackspace.com/canon-jenkins/style.css&lt;/cssUrl&gt;
+  &lt;jsUrl&gt;http://js.cdn.rackspace.com/canon-jenkins/app.min.js&lt;/jsUrl&gt;
+&lt;/org.codefirst.SimpleThemeDecorator&gt;
 </code></pre>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<ol>
+<li>Restart Jenkins</li>
+</ol><h2>
+<a name="contributing" class="anchor" href="#contributing"><span class="octicon octicon-link"></span></a>Contributing</h2>
 
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+<pre><code>npm install
+grunt
+</code></pre>
       </section>
     </div>
 
